@@ -85,7 +85,7 @@ def create_yolov3_modules(config_model, ignore_thre):
     #Size goes with kernel size
     #mlist = nn.ModuleList()
     #mlist.append(add_conv(in_ch=3, out_ch=64, ksize=7, stride=2))
-    #mlist.MaxPool2d(3,stride=2)
+    #nn.MaxPool2d(3,stride=2)
     #mlist.append(resblock(ch=256, nblocks=3))
     #mlist.append(resblock(ch=512, nblocks=4))    
     #mlist.append(resblock(ch=1024, nblocks=6))    
