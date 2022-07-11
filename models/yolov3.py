@@ -78,6 +78,23 @@ def create_yolov3_modules(config_model, ignore_thre):
     mlist.append(resblock(ch=512, nblocks=8))    # shortcut 2 from here
     mlist.append(add_conv(in_ch=512, out_ch=1024, ksize=3, stride=2))
     mlist.append(resblock(ch=1024, nblocks=4))
+    
+        #ResNet50 Backbone
+    #nblocks are the multiplcation signs
+    #Fiters go with chanels
+    #Size goes with kernel size
+    #mlist = nn.ModuleList()
+    #mlist.append(add_conv(in_ch=3, out_ch=64, ksize=7, stride=2))
+    #mlist.append(resblock(ch=64))
+    #mlist.MaxPool2d(3,stride=2)
+    #mlist.append(add_conv(in_ch=64, out_ch=256, ksize=3, stride=2))
+    #mlist.append(resblock(ch=256, nblocks=3))
+    #mlist.append(add_conv(in_ch=128, out_ch=512, ksize=3, stride=2))
+    #mlist.append(resblock(ch=512, nblocks=4))    
+    #mlist.append(add_conv(in_ch=512, out_ch=256, ksize=3, stride=2))
+    #mlist.append(resblock(ch=256, nblocks=6))    
+    #mlist.append(add_conv(in_ch=256, out_ch=2048, ksize=3, stride=2))
+    #mlist.append(resblock(ch=2048, nblocks=3))
 
     # YOLOv3
     mlist.append(resblock(ch=1024, nblocks=2, shortcut=False))
